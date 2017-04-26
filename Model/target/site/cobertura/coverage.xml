@@ -1,0 +1,1647 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+
+<coverage line-rate="0.6597222222222222" branch-rate="0.44" lines-covered="190" lines-valid="288" branches-covered="66" branches-valid="150" complexity="1.8421052631578947" version="2.1.1" timestamp="1492604615007">
+	<sources>
+		<source>--source</source>
+		<source>D:/Projects/TaskAirbnb/Model/src/main/java</source>
+	</sources>
+	<packages>
+		<package name="com.hustlestar.airbnb" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="com.hustlestar.airbnb.Main" filename="com/hustlestar/airbnb/Main.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="11" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="0" branch="false"/>
+								<line number="14" hits="0" branch="false"/>
+								<line number="15" hits="0" branch="false"/>
+								<line number="16" hits="0" branch="false"/>
+								<line number="17" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="11" hits="0" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="14" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+						<line number="16" hits="0" branch="false"/>
+						<line number="17" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.hustlestar.airbnb.dao" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="com.hustlestar.airbnb.dao.ApartmentDAO" filename="com/hustlestar/airbnb/dao/ApartmentDAO.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.dao.UserDAO" filename="com/hustlestar/airbnb/dao/UserDAO.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.hustlestar.airbnb.dao.exc" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="com.hustlestar.airbnb.dao.exc.DAOException" filename="com/hustlestar/airbnb/dao/exc/DAOException.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+								<line number="9" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+								<line number="13" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/Throwable;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="16" hits="0" branch="false"/>
+								<line number="17" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/Throwable;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="20" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="0" branch="false"/>
+						<line number="9" hits="0" branch="false"/>
+						<line number="12" hits="0" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="16" hits="0" branch="false"/>
+						<line number="17" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.hustlestar.airbnb.dao.orcl" line-rate="0.9491525423728814" branch-rate="0.75" complexity="1.0">
+			<classes>
+				<class name="com.hustlestar.airbnb.dao.orcl.AbstractDAO" filename="com/hustlestar/airbnb/dao/orcl/AbstractDAO.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="setSource" signature="(Ljavax/sql/DataSource;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="6" branch="false"/>
+								<line number="19" hits="6" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="14" hits="6" branch="false"/>
+						<line number="18" hits="6" branch="false"/>
+						<line number="19" hits="6" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.dao.orcl.ApartmentOracle" filename="com/hustlestar/airbnb/dao/orcl/ApartmentOracle.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="19" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="findApartment" signature="(Ljava/lang/String;)Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="83" hits="6" branch="false"/>
+								<line number="84" hits="12" branch="false"/>
+								<line number="86" hits="6" branch="false"/>
+								<line number="87" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getApartmentByCriteria" signature="(Lcom/hustlestar/airbnb/domain/criteria/ApartmentCriteria;)Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="69" hits="6" branch="false"/>
+								<line number="70" hits="12" branch="false"/>
+								<line number="73" hits="6" branch="false"/>
+								<line number="74" hits="6" branch="false"/>
+								<line number="75" hits="6" branch="false"/>
+								<line number="76" hits="6" branch="false"/>
+								<line number="78" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAvailableApartments" signature="()Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="62" hits="6" branch="false"/>
+								<line number="65" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="getRowMapper" signature="()Lorg/springframework/jdbc/core/RowMapper;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="91" hits="15" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="19" hits="3" branch="false"/>
+						<line number="62" hits="6" branch="false"/>
+						<line number="65" hits="3" branch="false"/>
+						<line number="69" hits="6" branch="false"/>
+						<line number="70" hits="12" branch="false"/>
+						<line number="73" hits="6" branch="false"/>
+						<line number="74" hits="6" branch="false"/>
+						<line number="75" hits="6" branch="false"/>
+						<line number="76" hits="6" branch="false"/>
+						<line number="78" hits="6" branch="false"/>
+						<line number="83" hits="6" branch="false"/>
+						<line number="84" hits="12" branch="false"/>
+						<line number="86" hits="6" branch="false"/>
+						<line number="87" hits="6" branch="false"/>
+						<line number="91" hits="15" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.dao.orcl.ApartmentOracle$1" filename="com/hustlestar/airbnb/dao/orcl/ApartmentOracle.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lcom/hustlestar/airbnb/dao/orcl/ApartmentOracle;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="mapRow" signature="(Ljava/sql/ResultSet;I)Lcom/hustlestar/airbnb/domain/Apartment;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="93" hits="60" branch="false"/>
+								<line number="94" hits="60" branch="false"/>
+								<line number="95" hits="60" branch="false"/>
+								<line number="96" hits="60" branch="false"/>
+								<line number="97" hits="60" branch="false"/>
+								<line number="98" hits="60" branch="false"/>
+								<line number="99" hits="60" branch="false"/>
+								<line number="100" hits="60" branch="false"/>
+								<line number="101" hits="60" branch="false"/>
+								<line number="102" hits="60" branch="false"/>
+								<line number="103" hits="60" branch="false"/>
+								<line number="104" hits="60" branch="false"/>
+								<line number="105" hits="60" branch="false"/>
+								<line number="106" hits="60" branch="false"/>
+							</lines>
+						</method>
+						<method name="mapRow" signature="(Ljava/sql/ResultSet;I)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="91" hits="75" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="91" hits="75" branch="false"/>
+						<line number="93" hits="60" branch="false"/>
+						<line number="94" hits="60" branch="false"/>
+						<line number="95" hits="60" branch="false"/>
+						<line number="96" hits="60" branch="false"/>
+						<line number="97" hits="60" branch="false"/>
+						<line number="98" hits="60" branch="false"/>
+						<line number="99" hits="60" branch="false"/>
+						<line number="100" hits="60" branch="false"/>
+						<line number="101" hits="60" branch="false"/>
+						<line number="102" hits="60" branch="false"/>
+						<line number="103" hits="60" branch="false"/>
+						<line number="104" hits="60" branch="false"/>
+						<line number="105" hits="60" branch="false"/>
+						<line number="106" hits="60" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.dao.orcl.UserOracle" filename="com/hustlestar/airbnb/dao/orcl/UserOracle.java" line-rate="0.8333333333333334" branch-rate="0.75" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="16" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="addNewUser" signature="(Lcom/hustlestar/airbnb/domain/User;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="43" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="45" hits="3" branch="false"/>
+								<line number="46" hits="3" branch="false"/>
+								<line number="47" hits="3" branch="false"/>
+								<line number="48" hits="3" branch="false"/>
+								<line number="49" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="createNewPasswordForUser" signature="(Ljava/lang/String;Ljava/lang/String;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="78" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+						<method name="getRowMapper" signature="()Lorg/springframework/jdbc/core/RowMapper;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="94" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="getUser" signature="(Ljava/lang/String;)Lcom/hustlestar/airbnb/domain/User;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="62" hits="0" branch="false"/>
+								<line number="65" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="loginUser" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/hustlestar/airbnb/domain/User;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="54" hits="6" branch="false"/>
+								<line number="57" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="updateUserInfo" signature="(Lcom/hustlestar/airbnb/domain/User;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="85" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="87" hits="3" branch="false"/>
+								<line number="88" hits="3" branch="false"/>
+								<line number="89" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="updateUserPassword" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="70" hits="3" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="16" hits="3" branch="false"/>
+						<line number="43" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="45" hits="3" branch="false"/>
+						<line number="46" hits="3" branch="false"/>
+						<line number="47" hits="3" branch="false"/>
+						<line number="48" hits="3" branch="false"/>
+						<line number="49" hits="3" branch="false"/>
+						<line number="54" hits="6" branch="false"/>
+						<line number="57" hits="3" branch="false"/>
+						<line number="62" hits="0" branch="false"/>
+						<line number="65" hits="0" branch="false"/>
+						<line number="70" hits="3" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="78" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="85" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="87" hits="3" branch="false"/>
+						<line number="88" hits="3" branch="false"/>
+						<line number="89" hits="3" branch="false"/>
+						<line number="94" hits="3" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.dao.orcl.UserOracle$1" filename="com/hustlestar/airbnb/dao/orcl/UserOracle.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lcom/hustlestar/airbnb/dao/orcl/UserOracle;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="mapRow" signature="(Ljava/sql/ResultSet;I)Lcom/hustlestar/airbnb/domain/User;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="96" hits="3" branch="false"/>
+								<line number="97" hits="3" branch="false"/>
+								<line number="98" hits="3" branch="false"/>
+								<line number="99" hits="3" branch="false"/>
+								<line number="100" hits="3" branch="false"/>
+								<line number="101" hits="3" branch="false"/>
+								<line number="102" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="mapRow" signature="(Ljava/sql/ResultSet;I)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="94" hits="6" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="94" hits="6" branch="false"/>
+						<line number="96" hits="3" branch="false"/>
+						<line number="97" hits="3" branch="false"/>
+						<line number="98" hits="3" branch="false"/>
+						<line number="99" hits="3" branch="false"/>
+						<line number="100" hits="3" branch="false"/>
+						<line number="101" hits="3" branch="false"/>
+						<line number="102" hits="3" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.hustlestar.airbnb.domain" line-rate="0.509090909090909" branch-rate="0.22641509433962265" complexity="2.380952380952381">
+			<classes>
+				<class name="com.hustlestar.airbnb.domain.AbstractEntity" filename="com/hustlestar/airbnb/domain/AbstractEntity.java" line-rate="0.75" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="8" hits="240" branch="false"/>
+							</lines>
+						</method>
+						<method name="getId" signature="()I" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setId" signature="(I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="16" hits="183" branch="false"/>
+								<line number="17" hits="183" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="240" branch="false"/>
+						<line number="12" hits="0" branch="false"/>
+						<line number="16" hits="183" branch="false"/>
+						<line number="17" hits="183" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.domain.Apartment" filename="com/hustlestar/airbnb/domain/Apartment.java" line-rate="0.3076923076923077" branch-rate="0.0" complexity="2.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="81" branch="false"/>
+								<line number="14" hits="81" branch="false"/>
+							</lines>
+						</method>
+						<method name="equals" signature="(Ljava/lang/Object;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="58" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="59" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="61" hits="0" branch="false"/>
+								<line number="63" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="64" hits="0" branch="true" condition-coverage="0% (0/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+										<condition number="2" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="65" hits="0" branch="true" condition-coverage="0% (0/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+										<condition number="2" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="66" hits="0" branch="true" condition-coverage="0% (0/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+										<condition number="2" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="67" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+						<method name="getAddress" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="33" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCity" signature="()Lcom/hustlestar/airbnb/domain/City;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="25" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCountry" signature="()Lcom/hustlestar/airbnb/domain/Country;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="17" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getGuests" signature="()I" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="49" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getTitle" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="41" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="hashCode" signature="()I" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="73" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="74" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="75" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="76" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="77" hits="0" branch="false"/>
+								<line number="78" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setAddress" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="37" hits="60" branch="false"/>
+								<line number="38" hits="60" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCity" signature="(Lcom/hustlestar/airbnb/domain/City;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="29" hits="60" branch="false"/>
+								<line number="30" hits="60" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCountry" signature="(Lcom/hustlestar/airbnb/domain/Country;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="21" hits="60" branch="false"/>
+								<line number="22" hits="60" branch="false"/>
+							</lines>
+						</method>
+						<method name="setGuests" signature="(I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="53" hits="60" branch="false"/>
+								<line number="54" hits="60" branch="false"/>
+							</lines>
+						</method>
+						<method name="setTitle" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="45" hits="60" branch="false"/>
+								<line number="46" hits="60" branch="false"/>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="83" hits="0" branch="false"/>
+								<line number="84" hits="0" branch="false"/>
+								<line number="85" hits="0" branch="false"/>
+								<line number="86" hits="0" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
+								<line number="88" hits="0" branch="false"/>
+								<line number="89" hits="0" branch="false"/>
+								<line number="90" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="13" hits="81" branch="false"/>
+						<line number="14" hits="81" branch="false"/>
+						<line number="17" hits="0" branch="false"/>
+						<line number="21" hits="60" branch="false"/>
+						<line number="22" hits="60" branch="false"/>
+						<line number="25" hits="0" branch="false"/>
+						<line number="29" hits="60" branch="false"/>
+						<line number="30" hits="60" branch="false"/>
+						<line number="33" hits="0" branch="false"/>
+						<line number="37" hits="60" branch="false"/>
+						<line number="38" hits="60" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="45" hits="60" branch="false"/>
+						<line number="46" hits="60" branch="false"/>
+						<line number="49" hits="0" branch="false"/>
+						<line number="53" hits="60" branch="false"/>
+						<line number="54" hits="60" branch="false"/>
+						<line number="58" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="59" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="61" hits="0" branch="false"/>
+						<line number="63" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="64" hits="0" branch="true" condition-coverage="0% (0/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+								<condition number="2" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="65" hits="0" branch="true" condition-coverage="0% (0/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+								<condition number="2" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="66" hits="0" branch="true" condition-coverage="0% (0/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+								<condition number="2" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="67" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="73" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="74" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="75" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="76" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="77" hits="0" branch="false"/>
+						<line number="78" hits="0" branch="false"/>
+						<line number="83" hits="0" branch="false"/>
+						<line number="84" hits="0" branch="false"/>
+						<line number="85" hits="0" branch="false"/>
+						<line number="86" hits="0" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="88" hits="0" branch="false"/>
+						<line number="89" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.domain.City" filename="com/hustlestar/airbnb/domain/City.java" line-rate="0.2857142857142857" branch-rate="0.0" complexity="2.1666666666666665">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="9" hits="60" branch="false"/>
+								<line number="10" hits="60" branch="false"/>
+							</lines>
+						</method>
+						<method name="equals" signature="(Ljava/lang/Object;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="22" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="23" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="25" hits="0" branch="false"/>
+								<line number="27" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+						<method name="getTitle" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="hashCode" signature="()I" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="33" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+						<method name="setTitle" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="17" hits="60" branch="false"/>
+								<line number="18" hits="60" branch="false"/>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="38" hits="0" branch="false"/>
+								<line number="39" hits="0" branch="false"/>
+								<line number="40" hits="0" branch="false"/>
+								<line number="41" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="9" hits="60" branch="false"/>
+						<line number="10" hits="60" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="17" hits="60" branch="false"/>
+						<line number="18" hits="60" branch="false"/>
+						<line number="22" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="23" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="25" hits="0" branch="false"/>
+						<line number="27" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="33" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="38" hits="0" branch="false"/>
+						<line number="39" hits="0" branch="false"/>
+						<line number="40" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.domain.Country" filename="com/hustlestar/airbnb/domain/Country.java" line-rate="0.2857142857142857" branch-rate="0.0" complexity="2.1666666666666665">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="9" hits="60" branch="false"/>
+								<line number="10" hits="60" branch="false"/>
+							</lines>
+						</method>
+						<method name="equals" signature="(Ljava/lang/Object;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="22" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="23" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="25" hits="0" branch="false"/>
+								<line number="27" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+						<method name="getTitle" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="hashCode" signature="()I" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="33" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+						<method name="setTitle" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="17" hits="60" branch="false"/>
+								<line number="18" hits="60" branch="false"/>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="38" hits="0" branch="false"/>
+								<line number="39" hits="0" branch="false"/>
+								<line number="40" hits="0" branch="false"/>
+								<line number="41" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="9" hits="60" branch="false"/>
+						<line number="10" hits="60" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="17" hits="60" branch="false"/>
+						<line number="18" hits="60" branch="false"/>
+						<line number="22" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="23" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="25" hits="0" branch="false"/>
+						<line number="27" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="33" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="38" hits="0" branch="false"/>
+						<line number="39" hits="0" branch="false"/>
+						<line number="40" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.domain.User" filename="com/hustlestar/airbnb/domain/User.java" line-rate="0.8461538461538461" branch-rate="0.5454545454545454" complexity="2.642857142857143">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="39" branch="false"/>
+								<line number="14" hits="39" branch="false"/>
+							</lines>
+						</method>
+						<method name="equals" signature="(Ljava/lang/Object;)Z" line-rate="1.0" branch-rate="0.7058823529411765" complexity="0">
+							<lines>
+								<line number="58" hits="36" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="59" hits="15" branch="true" condition-coverage="100% (4/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="61" hits="15" branch="false"/>
+								<line number="63" hits="15" branch="true" condition-coverage="66% (4/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+										<condition number="2" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="64" hits="15" branch="true" condition-coverage="66% (4/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+										<condition number="2" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="65" hits="15" branch="true" condition-coverage="66% (4/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+										<condition number="2" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="66" hits="15" branch="true" condition-coverage="66% (4/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+										<condition number="2" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="67" hits="15" branch="true" condition-coverage="50% (2/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+						<method name="getEmail" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="25" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getFirstName" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="33" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getLastName" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="41" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getLogin" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="17" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPassword" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="49" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="hashCode" signature="()I" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="73" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="74" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="75" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="76" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="77" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="78" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setEmail" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="29" hits="21" branch="false"/>
+								<line number="30" hits="21" branch="false"/>
+							</lines>
+						</method>
+						<method name="setFirstName" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="37" hits="21" branch="false"/>
+								<line number="38" hits="21" branch="false"/>
+							</lines>
+						</method>
+						<method name="setLastName" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="45" hits="21" branch="false"/>
+								<line number="46" hits="21" branch="false"/>
+							</lines>
+						</method>
+						<method name="setLogin" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="21" hits="42" branch="false"/>
+								<line number="22" hits="42" branch="false"/>
+							</lines>
+						</method>
+						<method name="setPassword" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="53" hits="18" branch="false"/>
+								<line number="54" hits="18" branch="false"/>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="84" hits="3" branch="false"/>
+								<line number="85" hits="3" branch="false"/>
+								<line number="86" hits="3" branch="false"/>
+								<line number="87" hits="3" branch="false"/>
+								<line number="88" hits="3" branch="false"/>
+								<line number="89" hits="3" branch="false"/>
+								<line number="90" hits="3" branch="false"/>
+								<line number="91" hits="3" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="13" hits="39" branch="false"/>
+						<line number="14" hits="39" branch="false"/>
+						<line number="17" hits="6" branch="false"/>
+						<line number="21" hits="42" branch="false"/>
+						<line number="22" hits="42" branch="false"/>
+						<line number="25" hits="6" branch="false"/>
+						<line number="29" hits="21" branch="false"/>
+						<line number="30" hits="21" branch="false"/>
+						<line number="33" hits="6" branch="false"/>
+						<line number="37" hits="21" branch="false"/>
+						<line number="38" hits="21" branch="false"/>
+						<line number="41" hits="6" branch="false"/>
+						<line number="45" hits="21" branch="false"/>
+						<line number="46" hits="21" branch="false"/>
+						<line number="49" hits="3" branch="false"/>
+						<line number="53" hits="18" branch="false"/>
+						<line number="54" hits="18" branch="false"/>
+						<line number="58" hits="36" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="59" hits="15" branch="true" condition-coverage="100% (4/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="61" hits="15" branch="false"/>
+						<line number="63" hits="15" branch="true" condition-coverage="66% (4/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+								<condition number="2" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="64" hits="15" branch="true" condition-coverage="66% (4/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+								<condition number="2" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="65" hits="15" branch="true" condition-coverage="66% (4/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+								<condition number="2" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="66" hits="15" branch="true" condition-coverage="66% (4/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+								<condition number="2" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="67" hits="15" branch="true" condition-coverage="50% (2/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="73" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="74" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="75" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="76" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="77" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="78" hits="0" branch="false"/>
+						<line number="84" hits="3" branch="false"/>
+						<line number="85" hits="3" branch="false"/>
+						<line number="86" hits="3" branch="false"/>
+						<line number="87" hits="3" branch="false"/>
+						<line number="88" hits="3" branch="false"/>
+						<line number="89" hits="3" branch="false"/>
+						<line number="90" hits="3" branch="false"/>
+						<line number="91" hits="3" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.hustlestar.airbnb.domain.criteria" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="com.hustlestar.airbnb.domain.criteria.ApartmentCriteria" filename="com/hustlestar/airbnb/domain/criteria/ApartmentCriteria.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="11" hits="12" branch="false"/>
+								<line number="15" hits="12" branch="false"/>
+								<line number="16" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCity" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="19" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCountry" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="28" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="getGuests" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="44" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="getTitle" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="36" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCity" signature="(I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="23" hits="6" branch="false"/>
+								<line number="24" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCountry" signature="(I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="32" hits="3" branch="false"/>
+								<line number="33" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="setGuests" signature="(I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="48" hits="3" branch="false"/>
+								<line number="49" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="setTitle" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="40" hits="3" branch="false"/>
+								<line number="41" hits="3" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="11" hits="12" branch="false"/>
+						<line number="15" hits="12" branch="false"/>
+						<line number="16" hits="12" branch="false"/>
+						<line number="19" hits="12" branch="false"/>
+						<line number="23" hits="6" branch="false"/>
+						<line number="24" hits="6" branch="false"/>
+						<line number="28" hits="12" branch="false"/>
+						<line number="32" hits="3" branch="false"/>
+						<line number="33" hits="3" branch="false"/>
+						<line number="36" hits="6" branch="false"/>
+						<line number="40" hits="3" branch="false"/>
+						<line number="41" hits="3" branch="false"/>
+						<line number="44" hits="12" branch="false"/>
+						<line number="48" hits="3" branch="false"/>
+						<line number="49" hits="3" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.hustlestar.airbnb.service" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="com.hustlestar.airbnb.service.ApartmentService" filename="com/hustlestar/airbnb/service/ApartmentService.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.service.UserService" filename="com/hustlestar/airbnb/service/UserService.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.hustlestar.airbnb.service.exc" line-rate="0.25" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="com.hustlestar.airbnb.service.exc.ServiceException" filename="com/hustlestar/airbnb/service/exc/ServiceException.java" line-rate="0.25" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+								<line number="9" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="9" branch="false"/>
+								<line number="13" hits="9" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/Throwable;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="16" hits="0" branch="false"/>
+								<line number="17" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/Throwable;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="20" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="0" branch="false"/>
+						<line number="9" hits="0" branch="false"/>
+						<line number="12" hits="9" branch="false"/>
+						<line number="13" hits="9" branch="false"/>
+						<line number="16" hits="0" branch="false"/>
+						<line number="17" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.service.exc.UserServiceException" filename="com/hustlestar/airbnb/service/exc/UserServiceException.java" line-rate="0.25" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="7" hits="0" branch="false"/>
+								<line number="8" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="11" hits="0" branch="false"/>
+								<line number="12" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/Throwable;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="12" branch="false"/>
+								<line number="16" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/Throwable;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="19" hits="0" branch="false"/>
+								<line number="20" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="7" hits="0" branch="false"/>
+						<line number="8" hits="0" branch="false"/>
+						<line number="11" hits="0" branch="false"/>
+						<line number="12" hits="0" branch="false"/>
+						<line number="15" hits="12" branch="false"/>
+						<line number="16" hits="12" branch="false"/>
+						<line number="19" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.service.exc.ValidationException" filename="com/hustlestar/airbnb/service/exc/ValidationException.java" line-rate="0.25" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="7" hits="0" branch="false"/>
+								<line number="8" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="11" hits="9" branch="false"/>
+								<line number="12" hits="9" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/Throwable;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="0" branch="false"/>
+								<line number="16" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/Throwable;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="19" hits="0" branch="false"/>
+								<line number="20" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="7" hits="0" branch="false"/>
+						<line number="8" hits="0" branch="false"/>
+						<line number="11" hits="9" branch="false"/>
+						<line number="12" hits="9" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+						<line number="16" hits="0" branch="false"/>
+						<line number="19" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.hustlestar.airbnb.service.impl" line-rate="0.8833333333333333" branch-rate="1.0" complexity="4.8">
+			<classes>
+				<class name="com.hustlestar.airbnb.service.impl.ApartmentServiceImpl" filename="com/hustlestar/airbnb/service/impl/ApartmentServiceImpl.java" line-rate="1.0" branch-rate="1.0" complexity="1.6666666666666667">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="18" branch="false"/>
+							</lines>
+						</method>
+						<method name="findApartment" signature="(Ljava/lang/String;)Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="35" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="36" hits="3" branch="false"/>
+								<line number="38" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="getApartmentByCriteria" signature="(Lcom/hustlestar/airbnb/domain/criteria/ApartmentCriteria;)Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="31" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAvailableApartments" signature="()Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="26" hits="3" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="18" hits="18" branch="false"/>
+						<line number="26" hits="3" branch="false"/>
+						<line number="31" hits="12" branch="false"/>
+						<line number="35" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="36" hits="3" branch="false"/>
+						<line number="38" hits="3" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.hustlestar.airbnb.service.impl.UserServiceImpl" filename="com/hustlestar/airbnb/service/impl/UserServiceImpl.java" line-rate="0.8703703703703703" branch-rate="1.0" complexity="6.142857142857143">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="42" branch="false"/>
+							</lines>
+						</method>
+						<method name="authorizeUser" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/hustlestar/airbnb/domain/User;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="49" hits="9" branch="true" condition-coverage="100% (4/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="50" hits="3" branch="false"/>
+								<line number="52" hits="6" branch="false"/>
+								<line number="53" hits="3" branch="false"/>
+								<line number="54" hits="3" branch="false"/>
+								<line number="55" hits="3" branch="false"/>
+								<line number="56" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="changePassword" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="61" hits="9" branch="true" condition-coverage="100% (4/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="62" hits="9" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="63" hits="9" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="64" hits="9" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="65" hits="3" branch="false"/>
+								<line number="67" hits="6" branch="false"/>
+								<line number="68" hits="3" branch="false"/>
+								<line number="69" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="editProfile" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/hustlestar/airbnb/domain/User;" line-rate="0.7777777777777778" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="93" hits="6" branch="false"/>
+								<line number="94" hits="6" branch="false"/>
+								<line number="95" hits="6" branch="false"/>
+								<line number="96" hits="6" branch="false"/>
+								<line number="97" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="98" hits="3" branch="false"/>
+								<line number="100" hits="3" branch="false"/>
+								<line number="102" hits="0" branch="false"/>
+								<line number="103" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="passwordGenerator" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="112" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="registerUser" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/hustlestar/airbnb/domain/User;" line-rate="0.875" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="24" hits="9" branch="false"/>
+								<line number="26" hits="9" branch="true" condition-coverage="100% (4/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="27" hits="9" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="28" hits="9" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="29" hits="9" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="30" hits="3" branch="false"/>
+								<line number="32" hits="6" branch="false"/>
+								<line number="33" hits="6" branch="false"/>
+								<line number="34" hits="6" branch="false"/>
+								<line number="35" hits="6" branch="false"/>
+								<line number="37" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="38" hits="3" branch="false"/>
+								<line number="40" hits="3" branch="false"/>
+								<line number="41" hits="3" branch="false"/>
+								<line number="42" hits="0" branch="false"/>
+								<line number="43" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="restorePassword" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" line-rate="0.7272727272727273" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="74" hits="6" branch="false"/>
+								<line number="76" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="77" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="78" hits="0" branch="false"/>
+								<line number="80" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="81" hits="3" branch="false"/>
+								<line number="82" hits="3" branch="false"/>
+								<line number="84" hits="3" branch="false"/>
+								<line number="85" hits="3" branch="false"/>
+								<line number="86" hits="0" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="sendNewPassword" signature="(Ljava/lang/String;Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="109" hits="3" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="18" hits="42" branch="false"/>
+						<line number="24" hits="9" branch="false"/>
+						<line number="26" hits="9" branch="true" condition-coverage="100% (4/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="27" hits="9" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="28" hits="9" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="29" hits="9" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="30" hits="3" branch="false"/>
+						<line number="32" hits="6" branch="false"/>
+						<line number="33" hits="6" branch="false"/>
+						<line number="34" hits="6" branch="false"/>
+						<line number="35" hits="6" branch="false"/>
+						<line number="37" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="38" hits="3" branch="false"/>
+						<line number="40" hits="3" branch="false"/>
+						<line number="41" hits="3" branch="false"/>
+						<line number="42" hits="0" branch="false"/>
+						<line number="43" hits="0" branch="false"/>
+						<line number="49" hits="9" branch="true" condition-coverage="100% (4/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="50" hits="3" branch="false"/>
+						<line number="52" hits="6" branch="false"/>
+						<line number="53" hits="3" branch="false"/>
+						<line number="54" hits="3" branch="false"/>
+						<line number="55" hits="3" branch="false"/>
+						<line number="56" hits="3" branch="false"/>
+						<line number="61" hits="9" branch="true" condition-coverage="100% (4/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="62" hits="9" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="63" hits="9" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="64" hits="9" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="65" hits="3" branch="false"/>
+						<line number="67" hits="6" branch="false"/>
+						<line number="68" hits="3" branch="false"/>
+						<line number="69" hits="3" branch="false"/>
+						<line number="74" hits="6" branch="false"/>
+						<line number="76" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="77" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="78" hits="0" branch="false"/>
+						<line number="80" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="81" hits="3" branch="false"/>
+						<line number="82" hits="3" branch="false"/>
+						<line number="84" hits="3" branch="false"/>
+						<line number="85" hits="3" branch="false"/>
+						<line number="86" hits="0" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="93" hits="6" branch="false"/>
+						<line number="94" hits="6" branch="false"/>
+						<line number="95" hits="6" branch="false"/>
+						<line number="96" hits="6" branch="false"/>
+						<line number="97" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="98" hits="3" branch="false"/>
+						<line number="100" hits="3" branch="false"/>
+						<line number="102" hits="0" branch="false"/>
+						<line number="103" hits="0" branch="false"/>
+						<line number="109" hits="3" branch="false"/>
+						<line number="112" hits="6" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.hustlestar.airbnb.service.utils" line-rate="0.6666666666666666" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="com.hustlestar.airbnb.service.utils.Validation" filename="com/hustlestar/airbnb/service/utils/Validation.java" line-rate="0.6666666666666666" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+								<line number="9" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="validateEmail" signature="(Ljava/lang/String;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="24" hits="15" branch="false"/>
+							</lines>
+						</method>
+						<method name="validateLogin" signature="(Ljava/lang/String;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="16" hits="33" branch="false"/>
+							</lines>
+						</method>
+						<method name="validatePassword" signature="(Ljava/lang/String;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="20" hits="51" branch="false"/>
+							</lines>
+						</method>
+						<method name="validateString" signature="(Ljava/lang/String;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="6" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="0" branch="false"/>
+						<line number="9" hits="0" branch="false"/>
+						<line number="12" hits="6" branch="false"/>
+						<line number="16" hits="33" branch="false"/>
+						<line number="20" hits="51" branch="false"/>
+						<line number="24" hits="15" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>

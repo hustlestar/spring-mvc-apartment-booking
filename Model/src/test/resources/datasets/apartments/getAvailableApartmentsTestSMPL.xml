@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <apartments A_TITLE="Beautiful Palace Near Ocean" A_ADDRESS="Some Road, 22" A_CO_ID="1" A_CI_ID="1" A_GUESTS="4"/>
+    <apartments A_TITLE="Neat Room" A_ADDRESS="Reich of 3" A_CO_ID="2" A_CI_ID="2" A_GUESTS="2"/>
+    <apartments A_TITLE="Luxurious Flat" A_ADDRESS="Arbat 24" A_CO_ID="3" A_CI_ID="3" A_GUESTS="3"/>
+    <apartments A_TITLE="Cottage" A_ADDRESS="Galo 33" A_CO_ID="4" A_CI_ID="4" A_GUESTS="2"/>
+    <apartments A_TITLE="Big flat" A_ADDRESS="Shibuya 21" A_CO_ID="5" A_CI_ID="5" A_GUESTS="9"/>
+    <apartments A_TITLE="VIP apartment" A_ADDRESS="Gwqewqg 221" A_CO_ID="6" A_CI_ID="6" A_GUESTS="8"/>
+    <apartments A_TITLE="Great bungalow" A_ADDRESS="Shevchenko 10" A_CO_ID="7" A_CI_ID="7" A_GUESTS="9"/>
+    <apartments A_TITLE="Old palace " A_ADDRESS="Adasdas 13" A_CO_ID="8" A_CI_ID="8" A_GUESTS="3"/>
+    <apartments A_TITLE="Hi-tech flat" A_ADDRESS="Super road 2" A_CO_ID="9" A_CI_ID="9" A_GUESTS="9"/>
+    <apartments A_TITLE="Big room" A_ADDRESS="Christ 88" A_CO_ID="10" A_CI_ID="10" A_GUESTS="2"/>
+    <apartments A_TITLE="Loft flat" A_ADDRESS="King 14" A_CO_ID="11" A_CI_ID="11" A_GUESTS="5"/>
+    <apartments A_TITLE="Big apartment" A_ADDRESS="Yelowpuki 24" A_CO_ID="12" A_CI_ID="12" A_GUESTS="9"/>
+    <apartments A_TITLE="Luxurious Apartment" A_ADDRESS="Mickevich 2" A_CO_ID="13" A_CI_ID="13" A_GUESTS="7"/>
+</dataset>

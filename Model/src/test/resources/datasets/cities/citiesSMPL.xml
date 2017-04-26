@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <cities CI_ID="1" CI_TITLE="Los Angeles" CI_CO_ID="1"/>
+  <cities CI_ID="2" CI_TITLE="Berlin" CI_CO_ID="2"/>
+  <cities CI_ID="3" CI_TITLE="Moscow" CI_CO_ID="3"/>
+  <cities CI_ID="4" CI_TITLE="Minsk" CI_CO_ID="4"/>
+  <cities CI_ID="5" CI_TITLE="Tokyo" CI_CO_ID="5"/>
+  <cities CI_ID="6" CI_TITLE="Beijing" CI_CO_ID="6"/>
+  <cities CI_ID="7" CI_TITLE="Kiev" CI_CO_ID="7"/>
+  <cities CI_ID="8" CI_TITLE="Paris" CI_CO_ID="8"/>
+  <cities CI_ID="9" CI_TITLE="Toronto" CI_CO_ID="9"/>
+  <cities CI_ID="10" CI_TITLE="Rio" CI_CO_ID="10"/>
+  <cities CI_ID="11" CI_TITLE="Stockholm" CI_CO_ID="11"/>
+  <cities CI_ID="12" CI_TITLE="Helsinki" CI_CO_ID="12"/>
+  <cities CI_ID="13" CI_TITLE="Warsaw" CI_CO_ID="13"/>
+</dataset>
