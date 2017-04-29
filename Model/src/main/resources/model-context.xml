@@ -16,7 +16,10 @@
         <property name="maxActive" value="${jdbc.maxActive}"/>
     </bean>
 
-    <context:property-placeholder location="jdbc.properties"/>
+    <context:property-placeholder properties-ref="requiredProperties"/>
 
+    <bean id="requiredProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations" value="classpath:jdbc.properties" />
+    </bean>
 
 </beans>
