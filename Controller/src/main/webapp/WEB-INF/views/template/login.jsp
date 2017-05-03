@@ -3,5 +3,5 @@
     <input id="l-login" name="login" type="text">
     <label for="l-pass">Password</label>
     <input id="l-pass" name="password" type="password">
-    <button type="submit">Submit</button>
+    <button class="btn btn-success"  type="submit">Submit</button>
 </form>

@@ -1,16 +1,13 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Yauheni_Malashchytsk
-  Date: 5/3/2017
-  Time: 4:17 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<div class="col-sm-3 col-md-2 sidebar">
+    <c:if test="${not empty sessionScope.get('user')}">
+        <ul class="nav nav-sidebar">
+            <li class="active"><a href="/welcome">My profile <span class="sr-only">(current)</span></a></li>
+            <li><a href="/editProfile">Edit profile</a></li>
+            <li><a href="/changePassword">Change password</a></li>
+        </ul>
+    </c:if>
+    <ul class="nav nav-sidebar">
+        <li><a href="/apartments">View apartments <span class="sr-only">(current)</span></a></li>
+    </ul>
+</div>

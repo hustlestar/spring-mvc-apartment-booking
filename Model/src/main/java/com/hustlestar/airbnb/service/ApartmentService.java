@@ -2,6 +2,7 @@ package com.hustlestar.airbnb.service;
 
 import com.hustlestar.airbnb.domain.Apartment;
 import com.hustlestar.airbnb.domain.criteria.ApartmentCriteria;
+import com.hustlestar.airbnb.service.exc.ServiceException;
 
 import java.util.List;
 
@@ -16,4 +17,5 @@ public interface ApartmentService {
 
     List<Apartment> findApartment(String title);
 
+    Apartment getApartment(int id) throws ServiceException;
 }

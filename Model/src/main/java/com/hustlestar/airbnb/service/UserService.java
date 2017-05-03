@@ -1,6 +1,7 @@
 package com.hustlestar.airbnb.service;
 
 import com.hustlestar.airbnb.domain.User;
+import com.hustlestar.airbnb.domain.dto.UserDto;
 import com.hustlestar.airbnb.service.exc.UserServiceException;
 import com.hustlestar.airbnb.service.exc.ValidationException;
 
@@ -9,7 +10,7 @@ import com.hustlestar.airbnb.service.exc.ValidationException;
  */
 public interface UserService {
 
-    User registerUser(String login, String email, String password, String password2) throws ValidationException, UserServiceException;
+    User registerUser(UserDto userDto) throws ValidationException, UserServiceException;
 
     User authorizeUser(String login, String password) throws UserServiceException, ValidationException;
 

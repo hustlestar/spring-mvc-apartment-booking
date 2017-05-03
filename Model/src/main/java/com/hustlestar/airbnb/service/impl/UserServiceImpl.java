@@ -3,6 +3,7 @@ package com.hustlestar.airbnb.service.impl;
 import com.hustlestar.airbnb.dao.UserDAO;
 import com.hustlestar.airbnb.dao.exc.DAOException;
 import com.hustlestar.airbnb.domain.User;
+import com.hustlestar.airbnb.domain.dto.UserDto;
 import com.hustlestar.airbnb.service.UserService;
 import com.hustlestar.airbnb.service.exc.UserServiceException;
 import com.hustlestar.airbnb.service.exc.ValidationException;
@@ -20,27 +21,29 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDAO userDAO;
 
-    public User registerUser(String login, String email, String password, String password2) throws ValidationException, UserServiceException {
+    public User registerUser(UserDto userDto) throws ValidationException, UserServiceException {
         User user = null;
         try {
-            if (!Validation.validateLogin(login) || !Validation.validatePassword(password)
-                    || !Validation.validatePassword(password2)
-                    || !Validation.validateEmail(email)
-                    || !password.equals(password2)) {
+            if (!Validation.validateLogin(userDto.getLogin())
+                    || !Validation.validatePassword(userDto.getPassword())
+                    || !Validation.validatePassword(userDto.getPassword2())
+                    || !Validation.validateEmail(userDto.getEmail())
+                    || !userDto.getPassword().equals(userDto.getPassword2())) {
                 throw new ValidationException("Password and login should be at least 5 symbols including letters and digits");
             } else {
                 user = new User();
-                user.setLogin(login);
-                user.setEmail(email);
-                user.setPassword(password);
+                user.setLogin(userDto.getLogin());
+                user.setEmail(userDto.getEmail());
+                user.setPassword(userDto.getPassword());
             }
             if (userDAO.addNewUser(user)) {
                 return user;
+            } else{
+                throw new UserServiceException("Cant create user with such params");
             }
         } catch (DAOException e) {
             throw new UserServiceException("User with such login already exists", e);
         }
-        return null;
     }
 
     public User authorizeUser(String login, String password) throws UserServiceException, ValidationException {

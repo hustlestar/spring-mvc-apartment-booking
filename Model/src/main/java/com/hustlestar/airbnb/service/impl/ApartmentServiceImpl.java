@@ -1,9 +1,11 @@
 package com.hustlestar.airbnb.service.impl;
 
 import com.hustlestar.airbnb.dao.ApartmentDAO;
+import com.hustlestar.airbnb.dao.exc.DAOException;
 import com.hustlestar.airbnb.domain.Apartment;
 import com.hustlestar.airbnb.domain.criteria.ApartmentCriteria;
 import com.hustlestar.airbnb.service.ApartmentService;
+import com.hustlestar.airbnb.service.exc.ServiceException;
 import com.hustlestar.airbnb.service.utils.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,6 +38,14 @@ public class ApartmentServiceImpl implements ApartmentService {
             return apartmentDAO.findApartment(title);
         } else {
             return Collections.emptyList();
+        }
+    }
+
+    public Apartment getApartment(int id) throws ServiceException {
+        try {
+            return apartmentDAO.getApartment(id);
+        } catch (DAOException e) {
+            throw new ServiceException("No apartment with such id", e);
         }
     }
 }

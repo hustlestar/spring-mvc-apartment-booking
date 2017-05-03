@@ -26,8 +26,6 @@
 
     </dependencies>
 
-    <build>
-        <defaultGoal>test package</defaultGoal>
-    </build>
+
 
 </project>

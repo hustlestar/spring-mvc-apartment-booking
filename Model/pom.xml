@@ -17,15 +17,16 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.hustlestar.dbunit.mockito</groupId>
-            <artifactId>com.hustlestart.aop</artifactId>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>com.hustlestar.aop</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.hustlestar.dbunit.mockito</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>com.hustlestar.domain</artifactId>
             <version>${project.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
@@ -95,5 +96,9 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <defaultGoal>clean install</defaultGoal>
+    </build>
 
 </project>

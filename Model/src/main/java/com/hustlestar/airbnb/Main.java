@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Main {
     public static void main(String[] args) throws DAOException {
-        ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("spring-context.xml");
+        ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("model-context.xml");
         UserDAO userDAO = (UserDAO) ctx.getBean("userOracle");
         userDAO.getUser("user4");
         System.out.println(userDAO.hashCode());

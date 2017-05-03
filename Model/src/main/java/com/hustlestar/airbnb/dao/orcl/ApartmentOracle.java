@@ -1,10 +1,13 @@
 package com.hustlestar.airbnb.dao.orcl;
 
 import com.hustlestar.airbnb.dao.ApartmentDAO;
+import com.hustlestar.airbnb.dao.exc.DAOException;
 import com.hustlestar.airbnb.domain.Apartment;
 import com.hustlestar.airbnb.domain.City;
 import com.hustlestar.airbnb.domain.Country;
 import com.hustlestar.airbnb.domain.criteria.ApartmentCriteria;
+import org.springframework.dao.DataAccessException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
@@ -57,6 +60,15 @@ public class ApartmentOracle extends AbstractDAO implements ApartmentDAO {
                     "AND (A_CI_ID=? OR ?=0) " +
                     "AND (A_GUESTS>? OR ?=0) " +
                     "AND (A_TITLE LIKE ? OR ? IS NULL) ";
+    public static final String GET_APARTMENT_BY_ID =
+            "SELECT A_ID, a_title, a_guests, a_address, a_co_id, countries.co_title, apartments.a_ci_id, cities.ci_title " +
+                    "FROM APARTMENTS\n" +
+                    "LEFT JOIN COUNTRIES \n" +
+                    "ON a_co_id = countries.co_id\n" +
+                    "LEFT JOIN cities\n" +
+                    "ON apartments.a_ci_id = cities.ci_id\n" +
+                    "AND countries.co_id=cities.ci_co_id\n" +
+                    "WHERE A_ID=?";
 
     public List<Apartment> getAvailableApartments() {
         return getJdbcTemplate().query(
@@ -85,6 +97,18 @@ public class ApartmentOracle extends AbstractDAO implements ApartmentDAO {
                 FIND_APARTMENT_BY_TITLE,
                 new Object[]{sb.toString()},
                 getRowMapper());
+    }
+
+    public Apartment getApartment(int id) throws DAOException {
+        try {
+            return getJdbcTemplate().queryForObject(
+                    GET_APARTMENT_BY_ID,
+                    new Object[]{id},
+                    getRowMapper()
+            );
+        } catch (EmptyResultDataAccessException e) {
+            throw new DAOException("Empty result set", e);
+        }
     }
 
     private RowMapper<Apartment> getRowMapper() {

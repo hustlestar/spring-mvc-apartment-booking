@@ -14,10 +14,26 @@
             <param-value>/WEB-INF/applicationContext.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
+        <async-supported>true</async-supported>
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            WEB-INF/applicationContext.xml
+        </param-value>
+        <param-value>
+            classpath:model-context.xml
+        </param-value>
+        <!--<param-value>
+            classpath:aop-context.xml
+        </param-value>-->
+    </context-param>
 </web-app>

@@ -35,9 +35,6 @@ public class Country extends AbstractEntity {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Country{");
-        sb.append("title='").append(title).append('\'');
-        sb.append('}');
-        return sb.toString();
+        return title;
     }
 }

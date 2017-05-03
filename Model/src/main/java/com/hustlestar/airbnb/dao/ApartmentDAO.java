@@ -1,5 +1,6 @@
 package com.hustlestar.airbnb.dao;
 
+import com.hustlestar.airbnb.dao.exc.DAOException;
 import com.hustlestar.airbnb.domain.Apartment;
 import com.hustlestar.airbnb.domain.criteria.ApartmentCriteria;
 
@@ -15,4 +16,6 @@ public interface ApartmentDAO {
     List<Apartment> getApartmentByCriteria(ApartmentCriteria criteria);
 
     List<Apartment> findApartment(String title);
+
+    Apartment getApartment(int id) throws DAOException;
 }

@@ -1,12 +1,16 @@
-<form action="/register" method="post">
-    <label for="r-login">Login</label>
-    <input id="r-login" name="login" type="text">
-    <label for="r-pass">Password</label>
-    <input id="r-pass" name="password" type="password">
-    <label for="r-pass2">Repeat password</label>
-    <input id="r-pass2" name="password2" type="password">
-    <label for="r-email">Email</label>
-    <input id="r-email" name="email" type="email">
-    <button type="submit">Submit</button>
-</form>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<form:form method="post" commandName="userDto" action="register" cssclass="">
+    <fieldset>
+        <form:label path="login">Login:</form:label>
+        <form:input path="login"/>
+        <form:label path="email">Email:</form:label>
+        <form:input path="email"/>
+        <form:label path="password">Password:</form:label>
+        <form:input path="password"/>
+        <form:label path="password2">Repeat password:</form:label>
+        <form:input path="password2"/>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </fieldset>
+</form:form>
+
 

@@ -3,6 +3,7 @@ package com.hustlestar.airbnb.dao.orcl;
 import com.hustlestar.airbnb.dao.UserDAO;
 import com.hustlestar.airbnb.dao.exc.DAOException;
 import com.hustlestar.airbnb.domain.User;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
@@ -40,22 +41,30 @@ public class UserOracle extends AbstractDAO implements UserDAO {
 
     //String sql = bundle.getString();
     public boolean addNewUser(User user) throws DAOException {
-        return getJdbcTemplate().update(
-                INSERT_USER,
-                user.getLogin(),
-                user.getEmail(),
-                user.getPassword(),
-                user.getFirstName(),
-                user.getLastName()
-        ) > 0;
+        try {
+            return getJdbcTemplate().update(
+                    INSERT_USER,
+                    user.getLogin(),
+                    user.getEmail(),
+                    user.getPassword(),
+                    user.getFirstName(),
+                    user.getLastName()
+            ) > 0;
+        } catch (DataAccessException e) {
+            throw new DAOException("User with such params already exists", e);
+        }
     }
 
     public User loginUser(String login, String password) throws DAOException {
-        return getJdbcTemplate().queryForObject(
-                LOGIN_USER,
-                new Object[]{login, password},
-                getRowMapper()
-        );
+        try {
+            return getJdbcTemplate().queryForObject(
+                    LOGIN_USER,
+                    new Object[]{login, password},
+                    getRowMapper()
+            );
+        } catch (DataAccessException e) {
+            throw new DAOException("Wrong login or pass", e);
+        }
     }
 
     public User getUser(String login) throws DAOException {

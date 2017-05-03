@@ -47,4 +47,16 @@ public class ApartmentCriteria implements Serializable {
     public void setGuests(int guests) {
         this.guests = guests;
     }
+
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("ApartmentCriteria{");
+        sb.append("country=").append(country);
+        sb.append(", city=").append(city);
+        sb.append(", title='").append(title).append('\'');
+        sb.append(", guests=").append(guests);
+        sb.append('}');
+        return sb.toString();
+    }
 }

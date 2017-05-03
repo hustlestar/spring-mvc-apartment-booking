@@ -26,13 +26,13 @@ public class Logging {
 
     private static final Logger logger = LogManager.getRootLogger();
 
-    @Before("execution(* com.hustlestar.airbnb.dao..*(..))")
+    @Before("execution(* com.hustlestar.airbnb.controller..*(..))")
     public void before(JoinPoint joinPoint) {
         logger.log(Level.INFO, "Before " + joinPoint.getSignature().getName() +
                 " called with " + Arrays.toString(joinPoint.getArgs()));
     }
 
-    @AfterReturning(pointcut = "execution(* com.hustlestar.airbnb.dao..*(..))", returning = "result")
+    @AfterReturning(pointcut = "execution(* com.hustlestar.airbnb.controller..*(..))", returning = "result")
     public void after(JoinPoint joinPoint, Object result) {
         logger.log(Level.INFO, "After " + joinPoint.getSignature().getName() +
                 " result is " + result);

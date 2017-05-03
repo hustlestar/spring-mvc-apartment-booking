@@ -3,10 +3,12 @@ package service;
 import com.hustlestar.airbnb.dao.UserDAO;
 import com.hustlestar.airbnb.dao.exc.DAOException;
 import com.hustlestar.airbnb.domain.User;
+import com.hustlestar.airbnb.domain.dto.UserDto;
 import com.hustlestar.airbnb.service.UserService;
 import com.hustlestar.airbnb.service.exc.UserServiceException;
 import com.hustlestar.airbnb.service.exc.ValidationException;
 import com.hustlestar.airbnb.service.impl.UserServiceImpl;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -91,13 +93,20 @@ public class UserServiceTest {
         String email = "duplicate@mail.ru";
         String password = "duplicate";
         String password2 = "duplicate";
+
         user.setLogin(login);
         user.setEmail(email);
         user.setPassword(password);
 
+        UserDto userDto = new UserDto();
+        userDto.setLogin(login);
+        userDto.setEmail(email);
+        userDto.setPassword(password);
+        userDto.setPassword2(password2);
+
         doThrow(DAOException.class).when(userDAO).addNewUser(user);
 
-        User result = userService.registerUser(login, email, password, password2);
+        User result = userService.registerUser(userDto);
 
         assertNull(result);
         verify(userDAO).addNewUser(user);
@@ -111,11 +120,19 @@ public class UserServiceTest {
         String email = "login@mail.ru";
         String password = "right";
         String password2 = "wrong";
+
         user.setLogin(login);
         user.setEmail(email);
         user.setPassword(password);
 
-        User result = userService.registerUser(login, email, password, password2);
+        UserDto userDto = new UserDto();
+        userDto.setLogin(login);
+        userDto.setEmail(email);
+        userDto.setPassword(password);
+        userDto.setPassword2(password2);
+
+
+        User result = userService.registerUser(userDto);
 
         assertNull(result);
         verify(userDAO, never()).addNewUser(user);
@@ -128,12 +145,19 @@ public class UserServiceTest {
         String email = "valid@mail.ru";
         String password = "valid";
         String password2 = "valid";
+
         user.setLogin(login);
         user.setEmail(email);
         user.setPassword(password);
 
+        UserDto userDto = new UserDto();
+        userDto.setLogin(login);
+        userDto.setEmail(email);
+        userDto.setPassword(password);
+        userDto.setPassword2(password2);
+
         when(userDAO.addNewUser(user)).thenReturn(true);
-        User result = userService.registerUser(login, email, password, password2);
+        User result = userService.registerUser(userDto);
 
         assertEquals(user, result);
         verify(userDAO).addNewUser(user);
