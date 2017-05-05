@@ -73,4 +73,9 @@ public class ApartmentController {
         return "blank";
     }
 
+    @ExceptionHandler
+    public @ResponseBody String handle(ServiceException e) {
+        return "ServiceException handled!";
+    }
+
 }
