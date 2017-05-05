@@ -1,6 +1,8 @@
 package com.hustlestar.airbnb.service;
 
 import com.hustlestar.airbnb.domain.Apartment;
+import com.hustlestar.airbnb.domain.City;
+import com.hustlestar.airbnb.domain.Country;
 import com.hustlestar.airbnb.domain.criteria.ApartmentCriteria;
 import com.hustlestar.airbnb.service.exc.ServiceException;
 
@@ -18,4 +20,8 @@ public interface ApartmentService {
     List<Apartment> findApartment(String title);
 
     Apartment getApartment(int id) throws ServiceException;
+
+    List<Country> getCountries() throws ServiceException;
+
+    List<City> getCities() throws ServiceException;
 }

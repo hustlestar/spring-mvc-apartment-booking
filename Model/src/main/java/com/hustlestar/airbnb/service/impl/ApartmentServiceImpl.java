@@ -3,6 +3,8 @@ package com.hustlestar.airbnb.service.impl;
 import com.hustlestar.airbnb.dao.ApartmentDAO;
 import com.hustlestar.airbnb.dao.exc.DAOException;
 import com.hustlestar.airbnb.domain.Apartment;
+import com.hustlestar.airbnb.domain.City;
+import com.hustlestar.airbnb.domain.Country;
 import com.hustlestar.airbnb.domain.criteria.ApartmentCriteria;
 import com.hustlestar.airbnb.service.ApartmentService;
 import com.hustlestar.airbnb.service.exc.ServiceException;
@@ -46,6 +48,22 @@ public class ApartmentServiceImpl implements ApartmentService {
             return apartmentDAO.getApartment(id);
         } catch (DAOException e) {
             throw new ServiceException("No apartment with such id", e);
+        }
+    }
+
+    public List<Country> getCountries() throws ServiceException {
+        try {
+            return apartmentDAO.getCountries();
+        } catch (DAOException e) {
+            throw new ServiceException("No countries", e);
+        }
+    }
+
+    public List<City> getCities() throws ServiceException {
+        try {
+            return apartmentDAO.getCities();
+        } catch (DAOException e) {
+            throw new ServiceException("No cities", e);
         }
     }
 }

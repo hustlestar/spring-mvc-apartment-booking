@@ -5,8 +5,18 @@ package com.hustlestar.airbnb.domain;
  */
 public class City extends AbstractEntity {
     private String title;
+    private int country;
+
 
     public City() {
+    }
+
+    public int getCountry() {
+        return country;
+    }
+
+    public void setCountry(int country) {
+        this.country = country;
     }
 
     public String getTitle() {
@@ -37,4 +47,6 @@ public class City extends AbstractEntity {
     public String toString() {
         return title;
     }
+
+
 }

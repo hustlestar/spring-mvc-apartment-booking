@@ -10,7 +10,7 @@
     <aop:aspectj-autoproxy/>
     <mvc:annotation-driven/>
     <mvc:annotation-driven enable-matrix-variables="true"/>
-    <mvc:resources mapping="/css/**" location="/css/" />
+    <mvc:resources mapping="/css/**" location="/css"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
@@ -20,5 +20,12 @@
             <value>.jsp</value>
         </property>
     </bean>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/apartments/intercept/**"/>
+            <bean class="com.hustlestar.airbnb.controller.interceptor.CriteriaInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>

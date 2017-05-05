@@ -7,6 +7,35 @@
         <c:import url="template/side.jsp"/>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header">Apartments for you</h1>
+            <form action="/apartments/intercept/">
+                <label>
+                    Title
+                    <input type="text" name="title"/>
+                </label>
+                <label>
+                    Country
+                    <select name="country">
+                        <option disabled selected value> Select country</option>
+                        <c:forEach var="country" items="${requestScope.countries}">
+                            <option value="${country.id}">${country.title}</option>
+                        </c:forEach>
+                    </select>
+                </label>
+                <label>
+                    City
+                    <select name="city">
+                        <option disabled selected value> Select city</option>
+                        <c:forEach var="city" items="${requestScope.cities}">
+                            <option value="${city.id}">${city.title}</option>
+                        </c:forEach>
+                    </select>
+                </label>
+                <label>
+                    Number of guests
+                    <input type="number" name="guests"/>
+                </label>
+                <button class="btn btn-success">Submit</button>
+            </form>
             <table class="table">
                 <thead>
                 <tr>

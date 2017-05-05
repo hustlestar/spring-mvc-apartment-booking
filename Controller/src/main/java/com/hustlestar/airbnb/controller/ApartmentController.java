@@ -1,11 +1,14 @@
 package com.hustlestar.airbnb.controller;
 
 import com.hustlestar.airbnb.domain.Apartment;
+import com.hustlestar.airbnb.domain.City;
+import com.hustlestar.airbnb.domain.Country;
 import com.hustlestar.airbnb.domain.criteria.ApartmentCriteria;
 import com.hustlestar.airbnb.service.ApartmentService;
 import com.hustlestar.airbnb.service.exc.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -21,10 +24,19 @@ public class ApartmentController {
     @Autowired
     private ApartmentService apartmentService;
 
+    @ModelAttribute
+    public void fillCityCountryDropDowns(ModelMap modelMap) throws ServiceException {
+        List<Country> countryList = apartmentService.getCountries();
+        List<City> cityList = apartmentService.getCities();
+        modelMap.put("countries", countryList);
+        modelMap.put("cities", cityList);
+    }
+
     @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView allApartments() {
+    public String allApartments(ModelMap modelMap) throws ServiceException {
         List<Apartment> apartmentList = apartmentService.getAvailableApartments();
-        return new ModelAndView("apartments", "apartments", apartmentList);
+        modelMap.put("apartments", apartmentList);
+        return "apartments";
     }
 
     @RequestMapping(method = RequestMethod.POST)
@@ -39,7 +51,7 @@ public class ApartmentController {
         return new ModelAndView("apartment", "apartment", apartment);
     }
 
-    @RequestMapping(value = "/criteria/{country}{city}{guests}{title}")
+    @RequestMapping(value = "/criteria/{title}{country}{city}{guests}")
     public ModelAndView getApartmentByCriteria(
             @MatrixVariable(name = "country", required = false, defaultValue = "0") int country,
             @MatrixVariable(name = "city", required = false, defaultValue = "0") int city,
@@ -55,5 +67,10 @@ public class ApartmentController {
         return new ModelAndView("apartments", "apartments", apartmentList);
     }
 
+    @RequestMapping(value = "/intercept/")
+    public String criteriaIntercept(
+    ) {
+        return "blank";
+    }
 
 }
