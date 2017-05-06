@@ -25,19 +25,31 @@ public class ApartmentServiceImpl implements ApartmentService {
     private ApartmentDAO apartmentDAO;
 
 
-    public List<Apartment> getAvailableApartments() {
+    public List<Apartment> getAvailableApartments() throws ServiceException {
 
-        return apartmentDAO.getAvailableApartments();
+        try {
+            return apartmentDAO.getAvailableApartments();
+        } catch (DAOException e) {
+            throw new ServiceException("Apartments are not available", e);
+        }
     }
 
-    public List<Apartment> getApartmentByCriteria(ApartmentCriteria criteria) {
+    public List<Apartment> getApartmentByCriteria(ApartmentCriteria criteria) throws ServiceException {
 
-        return apartmentDAO.getApartmentByCriteria(criteria);
+        try {
+            return apartmentDAO.getApartmentByCriteria(criteria);
+        } catch (DAOException e) {
+            throw new ServiceException("No match", e);
+        }
     }
 
-    public List<Apartment> findApartment(String title) {
+    public List<Apartment> findApartment(String title) throws ServiceException {
         if (Validation.validateString(title)) {
-            return apartmentDAO.findApartment(title);
+            try {
+                return apartmentDAO.findApartment(title);
+            } catch (DAOException e) {
+                throw new ServiceException("Nothing found", e);
+            }
         } else {
             return Collections.emptyList();
         }

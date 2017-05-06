@@ -13,11 +13,11 @@ import java.util.List;
  */
 public interface ApartmentDAO {
 
-    List<Apartment> getAvailableApartments();
+    List<Apartment> getAvailableApartments() throws DAOException;
 
-    List<Apartment> getApartmentByCriteria(ApartmentCriteria criteria);
+    List<Apartment> getApartmentByCriteria(ApartmentCriteria criteria) throws DAOException;
 
-    List<Apartment> findApartment(String title);
+    List<Apartment> findApartment(String title) throws DAOException;
 
     Apartment getApartment(int id) throws DAOException;
 

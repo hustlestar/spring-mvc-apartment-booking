@@ -68,35 +68,51 @@ public class UserOracle extends AbstractDAO implements UserDAO {
     }
 
     public User getUser(String login) throws DAOException {
-        return getJdbcTemplate().queryForObject(
-                GET_USER,
-                new Object[]{login},
-                getRowMapper()
-        );
+        try {
+            return getJdbcTemplate().queryForObject(
+                    GET_USER,
+                    new Object[]{login},
+                    getRowMapper()
+            );
+        } catch (DataAccessException e) {
+            throw new DAOException("No user with such login", e);
+        }
     }
 
     public boolean updateUserPassword(String login, String newPassword, String oldPassword) throws DAOException {
-        return getJdbcTemplate().update(
-                UPDATE_PASSWORD,
-                newPassword,
-                login,
-                oldPassword) > 0;
+        try {
+            return getJdbcTemplate().update(
+                    UPDATE_PASSWORD,
+                    newPassword,
+                    login,
+                    oldPassword) > 0;
+        } catch (DataAccessException e) {
+            throw new DAOException("Cannot update user's password", e);
+        }
     }
 
     public boolean createNewPasswordForUser(String login, String newPassword) throws DAOException {
-        return getJdbcTemplate().update(
-                NEW_PASSWORD,
-                newPassword,
-                login) > 0;
+        try {
+            return getJdbcTemplate().update(
+                    NEW_PASSWORD,
+                    newPassword,
+                    login) > 0;
+        } catch (DataAccessException e) {
+            throw new DAOException("Cannot restore user's password", e);
+        }
     }
 
     public boolean updateUserInfo(User user) throws DAOException {
-        return getJdbcTemplate().update(
-                UPDATE_USER_INFO,
-                user.getFirstName(),
-                user.getLastName(),
-                user.getLogin()
-        ) > 0;
+        try {
+            return getJdbcTemplate().update(
+                    UPDATE_USER_INFO,
+                    user.getFirstName(),
+                    user.getLastName(),
+                    user.getLogin()
+            ) > 0;
+        } catch (DataAccessException e) {
+            throw new DAOException("Cannot update user's info", e);
+        }
     }
 
     private RowMapper<User> getRowMapper() {

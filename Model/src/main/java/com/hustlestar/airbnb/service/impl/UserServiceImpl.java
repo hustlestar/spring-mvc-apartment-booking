@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
             }
             if (userDAO.addNewUser(user)) {
                 return user;
-            } else{
+            } else {
                 throw new UserServiceException("Cant create user with such params");
             }
         } catch (DAOException e) {

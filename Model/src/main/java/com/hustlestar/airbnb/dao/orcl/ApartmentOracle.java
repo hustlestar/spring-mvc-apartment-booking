@@ -6,6 +6,7 @@ import com.hustlestar.airbnb.domain.Apartment;
 import com.hustlestar.airbnb.domain.City;
 import com.hustlestar.airbnb.domain.Country;
 import com.hustlestar.airbnb.domain.criteria.ApartmentCriteria;
+import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -24,6 +25,7 @@ public class ApartmentOracle extends AbstractDAO implements ApartmentDAO {
     private static final String COUNTRY_ID = "A_CO_ID";
     private static final String COUNTRY_TITLE = "CO_TITLE";
     private static final String CITY_ID = "A_CI_ID";
+    public static final String CI_TITLE = "CI_TITLE";
     private static final String CITY_TITLE = "CI_TITLE";
     private static final String ADDRESS = "A_ADDRESS";
     private static final String TITLE = "A_TITLE";
@@ -68,34 +70,53 @@ public class ApartmentOracle extends AbstractDAO implements ApartmentDAO {
                     "ON apartments.a_ci_id = cities.ci_id\n" +
                     "AND countries.co_id=cities.ci_co_id\n" +
                     "WHERE A_ID=?";
+    public static final String GET_COUNTRIES = "SELECT * FROM countries";
+    public static final String GET_CITIES = "SELECT * FROM cities";
 
-    public List<Apartment> getAvailableApartments() {
-        return getJdbcTemplate().query(
-                GET_ALL_APARTMENTS,
-                new Object[]{},
-                getApartmentRowMapper());
+    public static final String CO_ID = "CO_ID";
+    public static final String CO_TITLE = "CO_TITLE";
+    public static final String CI_ID = "CI_ID";
+    public static final String CI_CO_ID = "CI_CO_ID";
+
+    public List<Apartment> getAvailableApartments() throws DAOException {
+        try {
+            return getJdbcTemplate().query(
+                    GET_ALL_APARTMENTS,
+                    new Object[]{},
+                    getApartmentRowMapper());
+        } catch (DataAccessException e) {
+            throw new DAOException("No apartments available", e);
+        }
     }
 
-    public List<Apartment> getApartmentByCriteria(ApartmentCriteria criteria) {
+    public List<Apartment> getApartmentByCriteria(ApartmentCriteria criteria) throws DAOException {
         StringBuilder sb = new StringBuilder("%").append(criteria.getTitle()).append("%");
-        return getJdbcTemplate().query(
-                GET_APARTMENT_BY_CRITERIA,
-                new Object[]{
-                        criteria.getCountry(), criteria.getCountry(),
-                        criteria.getCity(), criteria.getCity(),
-                        criteria.getGuests(), criteria.getGuests(),
-                        sb.toString(), sb.toString()
-                },
-                getApartmentRowMapper()
-        );
+        try {
+            return getJdbcTemplate().query(
+                    GET_APARTMENT_BY_CRITERIA,
+                    new Object[]{
+                            criteria.getCountry(), criteria.getCountry(),
+                            criteria.getCity(), criteria.getCity(),
+                            criteria.getGuests(), criteria.getGuests(),
+                            sb.toString(), sb.toString()
+                    },
+                    getApartmentRowMapper()
+            );
+        } catch (DataAccessException e) {
+            throw new DAOException("No apartments available with such criteria", e);
+        }
     }
 
-    public List<Apartment> findApartment(String title) {
+    public List<Apartment> findApartment(String title) throws DAOException {
         StringBuilder sb = new StringBuilder("%").append(title).append("%");
-        return getJdbcTemplate().query(
-                FIND_APARTMENT_BY_TITLE,
-                new Object[]{sb.toString()},
-                getApartmentRowMapper());
+        try {
+            return getJdbcTemplate().query(
+                    FIND_APARTMENT_BY_TITLE,
+                    new Object[]{sb.toString()},
+                    getApartmentRowMapper());
+        } catch (DataAccessException e) {
+            throw new DAOException("No apartments available found", e);
+        }
     }
 
     public Apartment getApartment(int id) throws DAOException {
@@ -111,34 +132,43 @@ public class ApartmentOracle extends AbstractDAO implements ApartmentDAO {
     }
 
     public List<Country> getCountries() throws DAOException {
-        return getJdbcTemplate().query(
-                "SELECT * FROM countries",
-                new Object[]{},
-                new RowMapper<Country>() {
-                    public Country mapRow(ResultSet resultSet, int i) throws SQLException {
-                        Country country = new Country();
-                        country.setId(resultSet.getInt("CO_ID"));
-                        country.setTitle(resultSet.getString("CO_TITLE"));
-                        return country;
+        try {
+            return getJdbcTemplate().query(
+                    GET_COUNTRIES,
+                    new Object[]{},
+                    new RowMapper<Country>() {
+                        public Country mapRow(ResultSet resultSet, int i) throws SQLException {
+                            Country country = new Country();
+                            country.setId(resultSet.getInt(CO_ID));
+                            country.setTitle(resultSet.getString(CO_TITLE));
+                            return country;
+                        }
                     }
-                }
-        );
+            );
+        } catch (DataAccessException e) {
+            throw new DAOException("No countries available", e);
+        }
     }
 
     public List<City> getCities() throws DAOException {
-        return getJdbcTemplate().query(
-                "SELECT * FROM cities",
-                new Object[]{},
-                new RowMapper<City>() {
-                    public City mapRow(ResultSet resultSet, int i) throws SQLException {
-                        City city = new City();
-                        city.setId(resultSet.getInt("CI_ID"));
-                        city.setTitle(resultSet.getString("CI_TITLE"));
-                        city.setCountry(resultSet.getInt("CI_CO_ID"));
-                        return city;
+        try {
+            return getJdbcTemplate().query(
+                    GET_CITIES,
+                    new Object[]{},
+                    new RowMapper<City>() {
+                        public City mapRow(ResultSet resultSet, int i) throws SQLException {
+                            City city = new City();
+                            city.setId(resultSet.getInt(CI_ID));
+                            city.setTitle(resultSet.getString(CI_TITLE));
+                            city.setCountry(resultSet.getInt(CI_CO_ID));
+                            return city;
+
+                        }
                     }
-                }
-        );
+            );
+        } catch (DataAccessException e) {
+            throw new DAOException("No cities available", e);
+        }
     }
 
     private RowMapper<Apartment> getApartmentRowMapper() {

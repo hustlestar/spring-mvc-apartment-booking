@@ -13,11 +13,11 @@ import java.util.List;
  */
 public interface ApartmentService {
 
-    List<Apartment> getAvailableApartments();
+    List<Apartment> getAvailableApartments() throws ServiceException;
 
-    List<Apartment> getApartmentByCriteria(ApartmentCriteria criteria);
+    List<Apartment> getApartmentByCriteria(ApartmentCriteria criteria) throws ServiceException;
 
-    List<Apartment> findApartment(String title);
+    List<Apartment> findApartment(String title) throws ServiceException;
 
     Apartment getApartment(int id) throws ServiceException;
 

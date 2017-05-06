@@ -40,7 +40,7 @@ public class ApartmentController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ModelAndView findApartment(@RequestParam String title) {
+    public ModelAndView findApartment(@RequestParam String title) throws ServiceException {
         List<Apartment> apartmentList = apartmentService.findApartment(title);
         return new ModelAndView("apartments", "apartments", apartmentList);
     }
@@ -57,7 +57,7 @@ public class ApartmentController {
             @MatrixVariable(name = "city", required = false, defaultValue = "0") int city,
             @MatrixVariable(name = "guests", required = false, defaultValue = "0") int guests,
             @MatrixVariable(name = "title", required = false, defaultValue = "") String title
-    ) {
+    ) throws ServiceException {
         ApartmentCriteria apartmentCriteria = new ApartmentCriteria();
         apartmentCriteria.setCity(city);
         apartmentCriteria.setCountry(country);
