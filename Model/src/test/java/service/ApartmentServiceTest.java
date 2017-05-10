@@ -1,9 +1,11 @@
 package service;
 
 import com.hustlestar.airbnb.dao.ApartmentDAO;
+import com.hustlestar.airbnb.dao.exc.DAOException;
 import com.hustlestar.airbnb.domain.Apartment;
 import com.hustlestar.airbnb.domain.criteria.ApartmentCriteria;
 import com.hustlestar.airbnb.service.ApartmentService;
+import com.hustlestar.airbnb.service.exc.ServiceException;
 import com.hustlestar.airbnb.service.impl.ApartmentServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,7 +34,7 @@ public class ApartmentServiceTest {
     private ApartmentService apartmentService = new ApartmentServiceImpl();
 
     @Test
-    public void getApartmentByCriteriaTest() {
+    public void getApartmentByCriteriaTest() throws ServiceException, DAOException {
         List<Apartment> emptyApartments = new ArrayList<Apartment>();
         ApartmentCriteria criteria1 = new ApartmentCriteria();
         criteria1.setCity(-5);
@@ -48,7 +50,7 @@ public class ApartmentServiceTest {
     }
 
     @Test
-    public void getApartmentsByCriteria2() {
+    public void getApartmentsByCriteria2() throws ServiceException, DAOException {
         List<Apartment> apartments = new ArrayList<Apartment>();
         apartments.add(new Apartment());
         ApartmentCriteria criteria2 = new ApartmentCriteria();
@@ -64,7 +66,7 @@ public class ApartmentServiceTest {
     }
 
     @Test
-    public void getAvailableApartmentsTest() {
+    public void getAvailableApartmentsTest() throws DAOException, ServiceException {
         List<Apartment> apartments = new ArrayList<Apartment>();
         apartments.add(new Apartment());
         apartments.add(new Apartment());
@@ -79,7 +81,7 @@ public class ApartmentServiceTest {
     }
 
     @Test
-    public void findApartmentTest() {
+    public void findApartmentTest()  throws DAOException, ServiceException {
         List<Apartment> emptyApartments = Collections.<Apartment>emptyList();
 
         String title1 = "";
@@ -95,7 +97,7 @@ public class ApartmentServiceTest {
     }
 
     @Test
-    public void findApartmentTest2() {
+    public void findApartmentTest2() throws DAOException, ServiceException  {
         List<Apartment> apartments = new ArrayList<Apartment>();
         apartments.add(new Apartment());
         apartments.add(new Apartment());
