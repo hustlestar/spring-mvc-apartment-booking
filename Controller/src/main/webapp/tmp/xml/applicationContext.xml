@@ -28,4 +28,6 @@
         </mvc:interceptor>
     </mvc:interceptors>
 
+    <!--<import resource="application-security.xml"/>-->
+
 </beans>

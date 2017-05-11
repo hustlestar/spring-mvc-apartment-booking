@@ -1,5 +1,6 @@
 package com.hustlestar.airbnb.controller.interceptor;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -9,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Created by Yauheni_Malashchytsk on 5/5/2017.
  */
-
+@Component
 public class CriteriaInterceptor implements HandlerInterceptor {
 
     public static final String TITLE = "title";

@@ -90,7 +90,7 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-    @Transactional
+    @Transactional()
     public User editProfile(String login, String firstName, String lastName) throws UserServiceException {
         try {
             User user = userDAO.getUser(login);
