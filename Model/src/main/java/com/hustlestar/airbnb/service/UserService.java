@@ -20,4 +20,7 @@ public interface UserService {
 
     User editProfile(String login, String firstName, String lastName) throws UserServiceException;
 
+    User findUserByEmail(String email) throws UserServiceException, ValidationException;
+
+    void sendEmail(String subject, String body, String email);
 }

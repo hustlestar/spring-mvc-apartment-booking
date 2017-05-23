@@ -14,7 +14,7 @@ import org.springframework.web.util.UrlPathHelper;
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.hustlestar.airbnb")
-@ImportResource({"classpath:/model-context.xml"})
+@ImportResource({"classpath:/application-context.xml"})
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Override

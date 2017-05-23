@@ -9,8 +9,16 @@ import com.hustlestar.airbnb.service.exc.UserServiceException;
 import com.hustlestar.airbnb.service.exc.ValidationException;
 import com.hustlestar.airbnb.service.utils.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.MailSender;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.mail.internet.MimeMessage;
+import java.util.UUID;
 
 /**
  * Created by Yauheni_Malashchytsk on 4/3/2017.
@@ -20,6 +28,11 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDAO userDAO;
+
+    @Autowired
+    private MailSender mailSender;
+
+    private static final String SUBJECT = "Airbnb security update";
 
     public User registerUser(UserDto userDto) throws ValidationException, UserServiceException {
         User user = null;
@@ -107,11 +120,39 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    public User findUserByEmail(String email) throws UserServiceException, ValidationException {
+        User user;
+        try {
+            if (!Validation.validateEmail(email)) {
+                throw new ValidationException("Email is incorrect");
+            }
+            user = userDAO.getUserByEmail(email);
+        } catch (DAOException e) {
+            throw new UserServiceException("No such user found", e);
+        }
+        return user;
+    }
+
     private void sendNewPassword(String email, String newPassword) {
-        //send email to user
+        StringBuilder sb = new StringBuilder();
+        sb.append("Hello, dear user!\n");
+        sb.append("\n");
+        sb.append("Password for your account was successfully changed\n");
+        sb.append("It's ");
+        sb.append(newPassword);
+        sendEmail(SUBJECT, sb.toString(), email);
+    }
+
+    public void sendEmail(String subject, String body, String email) {
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("z4zolton@gmail.com");
+        message.setTo(email);
+        message.setSubject(subject);
+        message.setText(body);
+        mailSender.send(message);
     }
 
     private String passwordGenerator() {
-        return "newPassword";
+        return UUID.randomUUID().toString().substring(0, 8);
     }
 }

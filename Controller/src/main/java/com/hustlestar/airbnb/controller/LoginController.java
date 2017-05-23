@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -107,6 +108,7 @@ public class LoginController {
 
         return new Callable<String>() {
             public String call() throws Exception {
+                User user = userService.findUserByEmail(email);
                 String newPassword = userService.restorePassword(login, email);
                 session.setAttribute("newPassword", newPassword);
                 return "redirect:result";
@@ -139,5 +141,11 @@ public class LoginController {
     @RequestMapping(value = "/result", method = RequestMethod.GET)
     public String result() {
         return "password";
+    }
+
+    @RequestMapping(value = "/logout")
+    public String logOut(SessionStatus status) {
+        status.setComplete();
+        return "redirect:/";
     }
 }

@@ -14,6 +14,8 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.MailSender;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -202,19 +204,6 @@ public class UserServiceTest {
 
         assertEquals(false, result);
         verify(userDAO).updateUserPassword(login, newPassword, oldPassword);
-    }
-
-
-    @Test
-    public void restorePassword1() throws DAOException, ValidationException, UserServiceException {
-        String login = "valid";
-        String email = "valid@mail.ru";
-
-        when(userDAO.createNewPasswordForUser(eq(login), anyString())).thenReturn(true);
-        String result = userService.restorePassword(login, email);
-
-        assertNotNull(result);
-        verify(userDAO).createNewPasswordForUser(eq(login), anyString());
     }
 
     @Test(expected = UserServiceException.class)

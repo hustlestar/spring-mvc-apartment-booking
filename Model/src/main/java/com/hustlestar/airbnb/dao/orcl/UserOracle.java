@@ -3,6 +3,7 @@ package com.hustlestar.airbnb.dao.orcl;
 import com.hustlestar.airbnb.dao.UserDAO;
 import com.hustlestar.airbnb.dao.exc.DAOException;
 import com.hustlestar.airbnb.domain.User;
+import org.springframework.context.annotation.Scope;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -26,6 +27,8 @@ public class UserOracle extends AbstractDAO implements UserDAO {
             "SELECT * FROM USERS WHERE U_LOGIN=? AND U_PASSWORD=?";
     public static final String GET_USER =
             "SELECT * FROM USERS WHERE U_LOGIN=?";
+    public static final String GET_USER_BY_EMAIL =
+            "SELECT * FROM USERS WHERE U_EMAIL=?";
     public static final String INSERT_USER =
             "INSERT INTO USERS" +
                     " (U_ID, U_LOGIN, U_EMAIL, U_PASSWORD, U_FIRST_NAME, U_LAST_NAME)" +
@@ -112,6 +115,18 @@ public class UserOracle extends AbstractDAO implements UserDAO {
             ) > 0;
         } catch (DataAccessException e) {
             throw new DAOException("Cannot update user's info", e);
+        }
+    }
+
+    public User getUserByEmail(String email) throws DAOException {
+        try {
+            return getJdbcTemplate().queryForObject(
+                    GET_USER_BY_EMAIL,
+                    new Object[]{email},
+                    getRowMapper()
+            );
+        } catch (DataAccessException e) {
+            throw new DAOException("No user with such email", e);
         }
     }
 

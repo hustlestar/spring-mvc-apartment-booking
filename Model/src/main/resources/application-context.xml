@@ -22,6 +22,20 @@
         <property name="locations" value="classpath:dao/jdbc.properties" />
     </bean>
 
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.gmail.com" />
+        <property name="port" value="587" />
+        <property name="username" value="z4zolton@gmail.com" />
+        <property name="password" value="ImRichAsFuck7" />
+
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+            </props>
+        </property>
+    </bean>
+
     <!--<context:property-placeholder location="dao/jdbc.properties"/>-->
 
 </beans>

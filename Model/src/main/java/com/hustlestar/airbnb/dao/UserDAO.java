@@ -19,4 +19,6 @@ public interface UserDAO {
     boolean createNewPasswordForUser(String login, String newPassword) throws DAOException;
 
     boolean updateUserInfo(User user) throws DAOException;
+
+    User getUserByEmail(String email) throws DAOException;
 }
